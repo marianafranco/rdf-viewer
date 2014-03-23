@@ -15,6 +15,14 @@
     "webRequest",
     "webRequestBlocking",
     "http://*/*",
-    "https://*/*"
-  ]
+    "https://*/*"    
+  ],
+
+  "content_scripts": [{
+    "js": ["underscore.js","dom.js","contentscript.js"],
+    "matches": ["http://*/*", "https://*/*", "file://*/*"],
+    "run_at": "document_start"
+  }],
+
+  "web_accessible_resources": ["XMLPrettyPrint.css"]
 }
